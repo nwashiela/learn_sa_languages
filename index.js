@@ -22,6 +22,19 @@ app.get('/', function (req, res) {
     res.render('home');
 });
 
+app.get("/page1", function(req, res){
+
+  res.render("page1")
+})
+app.get("/page2", function(req, res){
+
+  res.render("page2")
+})
+app.get("/lastpage", function (req, res){
+  
+  res.render("lastpage")
+})
+
 let PORT = process.env.PORT || 3007;
 
 app.listen(PORT, function(){
