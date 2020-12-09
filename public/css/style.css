@@ -1,0 +1,97 @@
+body {
+    /* background-image: ; */
+    background-color: green;
+    width: 80%;
+    background: linear-gradient(-70deg, green 5%, yellow 5%, white 5%, blue 5%, red 5%, rgba(0, 0, 0, 0) 30%), url(color.gif);
+    background-repeat: no-repeat;
+    background-size: 100%;
+
+}
+
+.container {
+    text-align: center;
+}
+
+.container2 {
+    text-align: center;
+    width: 100%;
+    border: 2px solid steelblue;
+
+}
+
+a{
+    font-size: 20px;
+    color: rgb(26, 22, 26);
+    text-decoration: none;
+    background-color: oldlace;
+    margin-right:10px ;
+   
+}
+
+h1 {
+    animation: color-change 15s infinite;
+    font-size: 100px;
+    color: honeydew;
+}
+.exercise{
+    text-align:center ;
+}
+h2{
+    font-size: 40px;
+    color: oldlace;
+}
+
+@keyframes color-change {
+
+    0%,
+    100% {
+        color: red;
+    }
+
+    20% {
+        color: green;
+    }
+
+    40% {
+        color: white;
+    }
+
+    60% {
+        color: blue;
+    }
+
+    80% {
+        color: yellow;
+    }
+}
+
+.button {
+    width: 200px;
+    height: 70px;
+    text-align: center;
+    font-size: 20px;
+    font-weight: bolder;
+    border-radius: 15px;
+
+}
+
+.button:hover {
+    font-size: 20px;
+    border-radius: 15px;
+    color: white;
+    background-color: tomato;
+}
+.buttonTest{
+    margin-top: 2em;
+    text-align: center;
+}
+.results{
+    text-align: center;
+}
+
+.username{
+    width: 300px;
+    height: 50px;
+    margin-bottom: 2em;
+}
+input { font-size: 25px; }
