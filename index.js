@@ -17,9 +17,9 @@ app.set('view engine', 'handlebars');
 app.use(express.static('public'))
 
 
-
 app.get('/', function (req, res) {
-    res.render('home');
+    
+  res.render('home');
 });
 
 app.get("/page1", function(req, res){
@@ -35,7 +35,7 @@ app.get("/lastpage", function (req, res){
   res.render("lastpage")
 })
 
-let PORT = process.env.PORT || 3007;
+let PORT = process.env.PORT || 3006;
 
 app.listen(PORT, function(){
   console.log('App starting on port', PORT);

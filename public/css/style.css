@@ -2,7 +2,7 @@ body {
     /* background-image: ; */
     background-color: green;
     width: 80%;
-    background: linear-gradient(-70deg, green 5%, yellow 5%, white 5%, blue 5%, red 5%, rgba(0, 0, 0, 0) 30%), url(color.gif);
+    background: linear-gradient(-70deg, green 5%, yellow 5%, white 5%, blue 5%, red 5%, rgba(0, 0, 0, 0) 30%), url(south-african-flag-clipart-1.jpg);
     background-repeat: no-repeat;
     background-size: 100%;
 
@@ -15,7 +15,7 @@ body {
 .container2 {
     text-align: center;
     width: 100%;
-    border: 2px solid steelblue;
+    /* border: 2px solid steelblue; */
 
 }
 
@@ -38,14 +38,14 @@ h1 {
 }
 h2{
     font-size: 40px;
-    color: oldlace;
+    color: black;
 }
 
 @keyframes color-change {
 
     0%,
     100% {
-        color: red;
+        color: crimson;
     }
 
     20% {
@@ -53,11 +53,11 @@ h2{
     }
 
     40% {
-        color: white;
+        color: lightcyan;
     }
 
     60% {
-        color: blue;
+        color: darkblue;
     }
 
     80% {
@@ -72,7 +72,41 @@ h2{
     font-size: 20px;
     font-weight: bolder;
     border-radius: 15px;
+    border:red 2px solid;
+    position: relative;
+    left: 25cm;
+    top: 6.2cm
 
+}
+
+.button1 {
+    width: 200px;
+    height: 70px;
+    text-align: center;
+    font-size: 20px;
+    font-weight: bolder;
+    border-radius: 15px;
+    border:red 2px solid;
+    position: relative;
+    right: 3cm;
+    top: 2.3cm;
+    
+}
+.button2{
+    width: 200px;
+    height: 70px;
+    text-align: center;
+    font-size: 20px;
+    font-weight: bolder;
+    border-radius: 15px;
+    border:red 2px solid;
+    position: relative;
+}
+
+.langDisplay{
+    color: whitesmoke;
+    font-size: 2em;
+    margin-top: 5em;
 }
 
 .button:hover {
@@ -80,6 +114,7 @@ h2{
     border-radius: 15px;
     color: white;
     background-color: tomato;
+    border: green 3px solid;
 }
 .buttonTest{
     margin-top: 2em;
@@ -95,3 +130,8 @@ h2{
     margin-bottom: 2em;
 }
 input { font-size: 25px; }
+
+.teachStyle{
+    text-align: center;
+    margin-top: 5em;
+}
