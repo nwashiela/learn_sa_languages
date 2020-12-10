@@ -9,9 +9,10 @@ let sotho = async () => {
     var isisuthu = new Audio('sounds/isisuthu.mp3');
     isisuthu.play()
 }
-let venda = async () => {
-    var tshiVenda = new Audio('sounds/venda.mp3');
-    tshiVenda.play()
+
+let tsivenda= async () => {
+    var vendaAudio = new Audio('sounds/venda.mp3');
+    vendaAudio.play()
 }
 
 
@@ -28,8 +29,8 @@ let xitsonga = async () => {
 }
 
 let afrikaans = async () => {
-    var afrikaans = new Audio('sounds/afrikaans.mp3');
-    afrikaans.play()
+    var afrikaansAudio = new Audio('sounds/afrikaans.mp3');
+    afrikaansAudio.play()
 }
 
 
