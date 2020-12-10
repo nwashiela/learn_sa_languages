@@ -1,3 +1,10 @@
+{/* <script type="text/javascript"> */ }
+// more documentation available at
+// https://github.com/tensorflow/tfjs-models/tree/master/speech-commands
+
+// the link to your model provided by Teachable Machine export panel
+const URL = "https://teachablemachine.withgoogle.com/models/b-_CxRbS6/";
+
 async function createModel() {
     const checkpointURL = URL + "model.json"; // model topology
     const metadataURL = URL + "metadata.json"; // model metadata
@@ -32,14 +39,14 @@ async function init() {
         // render the probability scores per class
         // let nodeC;
         let highiestClass = 0;
-    let modelTag = "";
+        let modelTag = "";
 
         for (let i = 0; i < classLabels.length; i++) {
             const classPrediction = classLabels[i]
-            + ": " + result.scores[i].toFixed(2);
-            if( result.scores[i].toFixed(2) > highiestClass){
+                + ": " + result.scores[i].toFixed(2);
+            if (result.scores[i].toFixed(2) > highiestClass) {
                 highiestClass = result.scores[i].toFixed(2)
-               modelTag = classLabels[i]
+                modelTag = classLabels[i]
             }
         }
         labelContainer.innerHTML = modelTag;
@@ -51,6 +58,27 @@ async function init() {
         overlapFactor: 0.50 // probably want between 0.5 and 0.75. More info in README
     });
 
+    async function qusetions(language) {
+        let quest = "";
+
+        if (quest === isiXhosa) {
+            return "Can you Greet in isiXhosa" + xhosa.jpg
+        } else if (quest === "English") {
+            return "Can you Greet in English" + english.jpg
+        } else if (quest === "isiZulu") {
+            return "Can you greet in isiZulu" + zulu.jpg
+        } else if (quest === "Venda"){
+            return "Can you greet in Venda" + venda.jpg
+        } else if (quest === "Ndebele"){
+            return "Can you greet in Ndebele" + ndebele.jpg
+        }
+        return {
+            qusetions
+        }
+
+    }
+
     // Stop the recognition in 5 seconds.
     // setTimeout(() => recognizer.stopListening(), 5000);
 }
+// </script>

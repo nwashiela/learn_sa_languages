@@ -16,7 +16,6 @@ create table player_exercise(
     player_id int,
     language_exercise_id int,
     listen_count int,
-    speak_count int,
     completed int,
 
     foreign key (player_id) references player(id),
