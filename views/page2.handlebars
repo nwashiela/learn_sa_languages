@@ -1,21 +1,26 @@
 <form action="/lastpage" method="get">
-<div class="exercise">
-    <h2>start greetings. Have fun &#9996</h2>
-</div>
+    <div class="exercise">
+        <h2>start greetings. Have fun &#9996</h2>
+    </div>
 
-<button type="submit" class="button">my results &#128515</button>
+    <button type="submit" class="button">my results &#128515</button>
 </form>
 <div class="teachStyle">
-<button type="button" onclick="init()" class="button1">Start &#9193</button>
-<br>
-<br>
+    <button type="button" onclick="init()" class="button1">Start &#9193</button>
+    <br>
+    <br>
 
-<div id="label-container" class="langDisplay"></div>
+    <div id="label-container" class="langDisplay"></div>
+
+    <div class="img"> </div>
 </div>
 <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@1.3.1/dist/tf.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/@tensorflow-models/speech-commands@0.4.0/dist/speech-commands.min.js"></script>
+<script
+    src="https://cdn.jsdelivr.net/npm/@tensorflow-models/speech-commands@0.4.0/dist/speech-commands.min.js"></script>
 
 <script type="text/javascript">
+
+    var img = document.querySelector('.img')
     // more documentation available at
     // https://github.com/tensorflow/tfjs-models/tree/master/speech-commands
 
@@ -48,7 +53,7 @@
 
         // listen() takes two arguments:
         // 1. A callback function that is invoked anytime a word is recognized.
-   
+
 
         // 2. A configuration object with adjustable fields
         recognizer.listen(result => {
@@ -56,18 +61,51 @@
             // render the probability scores per class
             // let nodeC;
             let highiestClass = 0;
-        let modelTag = "";
+            let modelTag = "";
 
             for (let i = 0; i < classLabels.length; i++) {
                 const classPrediction = classLabels[i]
-                + ": " + result.scores[i].toFixed(2);
-                if( result.scores[i].toFixed(2) > highiestClass){
+                    + ": " + result.scores[i].toFixed(2);
+                if (result.scores[i].toFixed(2) > highiestClass) {
                     highiestClass = result.scores[i].toFixed(2)
-                   modelTag = classLabels[i]
+                    modelTag = classLabels[i]
                 }
             }
             labelContainer.innerHTML = modelTag;
 
+            if (modelTag === "Background") {
+                img.innerHTML = "<img src= '/traditional pictures/thebig5.jpg width=\'400px\' height=\'150px\'>"
+
+            } 
+            else if (modelTag === "xhosa") {
+                img.innerHTML = "<img src= '/traditional pictures/Xhosa.jpg' width=\'400px\' height=\'150px\'>"
+            } 
+
+           else if (modelTag === "zulu") {
+                img.innerHTML = "<img src= '/traditional pictures/zulu.jpg' width=\'400px\' height=\'150px\'>"
+
+            } 
+           else if (modelTag === "ndebele") {
+                img.innerHTML = "<img src= '/traditional pictures/ndebele.jpg' width=\'400px\' height=\'150px\'>"
+
+            } 
+           else if (modelTag === "venda") {
+                img.innerHTML = "<img src= '/traditional pictures/venda.jpeg' width=\'400px\' height=\'150px\'>"
+
+            }
+            else if (modelTag === "english") {
+                img.innerHTML = "<img src= '/traditional pictures/andre.jpeg' width=\'400px\' height=\'150px\'>"
+
+            }
+
+
+
+
+
+
+
+            //("/traditional pictures/sotho.jpg")
+            //img.innerHTML = "Salzwa"
         }, {
             includeSpectrogram: true, // in case listen should return result.spectrogram
             probabilityThreshold: 0.75,
@@ -77,5 +115,7 @@
 
         // Stop the recognition in 5 seconds.
         // setTimeout(() => recognizer.stopListening(), 5000);
+
+        
     }
 </script>

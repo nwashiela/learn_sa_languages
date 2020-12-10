@@ -1,7 +1,9 @@
 let express = require('express');
 const exphbs  = require('express-handlebars');
 const bodyParser = require('body-parser')
+// const instanceFactory = require('factory_function')
 
+// let db = instanceFactory()
 
 
 let app = express();
@@ -28,6 +30,7 @@ app.get("/page1", function(req, res){
 })
 app.get("/page2", function(req, res){
 
+  // let s = db.exercise()
   res.render("page2")
 })
 app.get("/lastpage", function (req, res){
