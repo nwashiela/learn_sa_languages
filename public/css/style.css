@@ -2,7 +2,7 @@ body {
     /* background-image: ; */
     background-color: green;
     width: 80%;
-    background: linear-gradient(-70deg, green 5%, yellow 5%, white 5%, blue 5%, red 5%, rgba(0, 0, 0, 0) 30%), url(south-african-flag-clipart-1.jpg);
+    background: linear-gradient(-70deg, green 5%, yellow 5%, white 5%, blue 5%, red 5%, rgba(0, 0, 0, 0) 30%), url(Flag_of_South_Africa.png);
     background-repeat: no-repeat;
     background-size: 100%;
 
@@ -18,7 +18,9 @@ body {
     /* border: 2px solid steelblue; */
 
 }
-
+li{
+    
+}
 a{
     font-size: 20px;
     color: rgb(26, 22, 26);
@@ -41,12 +43,15 @@ h2{
     color: black;
 }
 
+h3{
+    font-size: 25px;
+    color: black;
+}
 @keyframes color-change {
 
     0%,
     100% {
-        color: crimson;
-    }
+        color: black ;   }
 
     20% {
         color: green;
@@ -91,6 +96,8 @@ h2{
     top: 2.3cm;
     
 }
+
+
 .button2{
     width: 200px;
     height: 70px;

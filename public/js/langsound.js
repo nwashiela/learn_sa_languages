@@ -25,8 +25,8 @@ let ndebele = async () => {
 
 document.addEventListener("click", sound());
 document.addEventListener("click", sotho());
-document.addEventListener("click", venda())
-document.addEventListener("click", ndebele())
+document.addEventListener("click", venda());
+document.addEventListener("click", ndebele());
 
 
 // playLang.innerHTML = bell.play()
