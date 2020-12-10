@@ -10,14 +10,27 @@ let sotho = async () => {
     isisuthu.play()
 }
 
-let venda = async () => {
-    var isivenda = new Audio('sounds/venda.mp3');
-    isivenda.play()
+let tsivenda= async () => {
+    var vendaAudio = new Audio('sounds/venda.mp3');
+    vendaAudio.play()
 }
+
+
 
 let ndebele = async () => {
     var isindebele = new Audio('sounds/isindebele.mp3');
-    isindebele.play()
+    isindebele.play();
+    
+}
+
+let xitsonga = async () => {
+    var xitsonga = new Audio('sounds/xitsonga.mp3');
+    xitsonga.play()
+}
+
+let afrikaans = async () => {
+    var afrikaansAudio = new Audio('sounds/afrikaans.mp3');
+    afrikaansAudio.play()
 }
 
 
@@ -25,8 +38,8 @@ let ndebele = async () => {
 
 document.addEventListener("click", sound());
 document.addEventListener("click", sotho());
-document.addEventListener("click", venda())
-document.addEventListener("click", ndebele())
+document.addEventListener("click", venda());
+document.addEventListener("click", ndebele());
+document.addEventListener("click", afrikaans());
+document.addEventListener("click", xitsonga());
 
-
-// playLang.innerHTML = bell.play()
