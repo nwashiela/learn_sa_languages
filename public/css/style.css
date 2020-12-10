@@ -76,7 +76,6 @@ h2{
     position: relative;
     left: 25cm;
     top: 6.2cm
-
 }
 
 .button1 {
@@ -102,14 +101,41 @@ h2{
     border:red 2px solid;
     position: relative;
 }
+.button3 {
+    width: 200px;
+    height: 70px;
+    text-align: center;
+    font-size: 20px;
+    font-weight: bolder;
+    border-radius: 15px;
+    border:red 2px solid; 
 
-.langDisplay{
-    color: whitesmoke;
-    font-size: 2em;
-    margin-top: 5em;
 }
 
+
 .button:hover {
+    font-size: 20px;
+    border-radius: 15px;
+    color: white;
+    background-color: tomato;
+    border: green 3px solid;
+}
+
+.button1:hover {
+    font-size: 20px;
+    border-radius: 15px;
+    color: white;
+    background-color: tomato;
+    border: green 3px solid;
+}
+.button2:hover {
+    font-size: 20px;
+    border-radius: 15px;
+    color: white;
+    background-color: tomato;
+    border: green 3px solid;
+}
+.button3:hover {
     font-size: 20px;
     border-radius: 15px;
     color: white;
@@ -133,5 +159,11 @@ input { font-size: 25px; }
 
 .teachStyle{
     text-align: center;
+    margin-top: 5em;
+}
+
+.langDisplay{
+    color: whitesmoke;
+    font-size: 2em;
     margin-top: 5em;
 }
