@@ -162,7 +162,13 @@ h3{
     height: 50px;
     margin-bottom: 2em;
 }
-input { font-size: 25px; }
+input { 
+    font-size: 25px; 
+    width: 4cm;
+    height: 1.5cm;
+    border: black solid 2px;
+    border-radius: 10px;
+}
 
 .teachStyle{
     text-align: center;

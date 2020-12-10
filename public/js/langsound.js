@@ -10,7 +10,7 @@ let sotho = async () => {
     isisuthu.play()
 }
 
-let venda = async () => {
+function venda(){
     var isivenda = new Audio('sounds/venda.mp3');
     isivenda.play()
 }
