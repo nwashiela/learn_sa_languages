@@ -30,10 +30,20 @@ a{
    
 }
 
+.mesage{
+   color: crimson;
+   font-size: 2.5em;
+    position: relative;
+    top: 2em;
+    right: 3em;
+   
+
+}
+
 h1 {
     animation: color-change 15s infinite;
     font-size: 100px;
-    color: honeydew;
+    color: black;
 }
 .exercise{
     text-align:center ;
@@ -47,7 +57,7 @@ h3{
     font-size: 25px;
     color: black;
 }
-@keyframes color-change {
+/* @keyframes color-change {
 
     0%,
     100% {
@@ -68,7 +78,7 @@ h3{
     80% {
         color: yellow;
     }
-}
+} */
 
 .button {
     width: 200px;
@@ -180,3 +190,7 @@ input {
     font-size: 2em;
     margin-top: 5em;
 }
+
+.languages {
+    
+}   

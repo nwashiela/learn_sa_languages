@@ -1,5 +1,16 @@
+
+var image = document.querySelector('.img')
+let userMessageElem = document.querySelector(".userMessageElem")
+let successElem = document.querySelector(".successElem")
+// let greetIn = document.querySelector(".greetIn")
+
+
+
+
+let init;
+
 async function createModel() {
-    const checkpointURL = URL + "model.json"; // model topology
+    let checkpointURL = URL + "model.json"; // model topology
     const metadataURL = URL + "metadata.json"; // model metadata
 
     const recognizer = speechCommands.create(
@@ -26,24 +37,35 @@ async function init() {
     // 1. A callback function that is invoked anytime a word is recognized.
 
 
-    // 2. A configuration object with adjustable fields
+    // 2. A configurationxh object with adjustable fields
     recognizer.listen(result => {
         const scores = result.scores; // probability of prediction for each class
         // render the probability scores per class
         // let nodeC;
         let highiestClass = 0;
-    let modelTag = "";
+        let modelTag = "";
 
         for (let i = 0; i < classLabels.length; i++) {
             const classPrediction = classLabels[i]
-            + ": " + result.scores[i].toFixed(2);
-            if( result.scores[i].toFixed(2) > highiestClass){
+                + ": " + result.scores[i].toFixed(2);
+            if (result.scores[i].toFixed(2) > highiestClass) {
                 highiestClass = result.scores[i].toFixed(2)
-               modelTag = classLabels[i]
+                modelTag = classLabels[i]
             }
+
+            console.log({ modelTag });
+
+           // if (modelTag === "Isixhosa") {
+
+
+           // } else {
+           //     return
+           // }
+
+
         }
         labelContainer.innerHTML = modelTag;
-
+        image.innerHTML = ('.traditional pictures/xhosa.jpg')
     }, {
         includeSpectrogram: true, // in case listen should return result.spectrogram
         probabilityThreshold: 0.75,
